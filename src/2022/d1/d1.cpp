@@ -38,11 +38,11 @@ int main()
             {
                 topThree[0] = topCal[i];
             }
-            else if (topCal[i] < topThree[0] && topCal[i] > topThree[1])
+            else if (topCal[i] > topThree[1])
             {
                 topThree[1] = topCal[i];
             }
-            else if (topCal[i] < topThree[1] && topCal[i] > topThree[2])
+            else if (topCal[i] > topThree[2])
             {
                 topThree[2] = topCal[i];
             }
