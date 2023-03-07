@@ -34,12 +34,12 @@ int main()
         for (int i = 0; i <= topCal.size(); i++)
         {
             // std::cout << "topCal: " << topCal[i] << std::endl;
-            if (topCal[i] > topThree[0])
+            if (topCal[i] >= topThree[0])
             {
                 topThree[1] = topThree[0];
                 topThree[0] = topCal[i];
             }
-            else if (topCal[i] > topThree[1])
+            else if (topCal[i] >= topThree[1])
             {
                 topThree[2] = topThree[1];
                 topThree[1] = topCal[i];
