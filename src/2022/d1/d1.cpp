@@ -8,7 +8,7 @@ int main()
 {
     std::ifstream ifs;
 
-    ifs.open("input-test.txt", std::ios::in);
+    ifs.open("input.txt", std::ios::in);
     if (ifs)
     {
         std::string line;
@@ -33,13 +33,15 @@ int main()
         // EOF reached
         for (int i = 0; i <= topCal.size(); i++)
         {
-            std::cout << "topCal: " << topCal[i] << std::endl;
+            // std::cout << "topCal: " << topCal[i] << std::endl;
             if (topCal[i] > topThree[0])
             {
+                topThree[1] = topThree[0];
                 topThree[0] = topCal[i];
             }
             else if (topCal[i] > topThree[1])
             {
+                topThree[2] = topThree[1];
                 topThree[1] = topCal[i];
             }
             else if (topCal[i] > topThree[2])
@@ -49,8 +51,8 @@ int main()
         }
         for (int j : topThree)
         {
-            std::cout << "Printing topThree array:" << std::endl;
-            std::cout << j << std::endl;
+            // std::cout << "Printing topThree array:" << std::endl;
+            // std::cout << j << std::endl;
             sum += j;
         }
         std::cout << "Sum: " << sum << std::endl;
