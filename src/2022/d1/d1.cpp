@@ -12,7 +12,8 @@ int main()
     if (ifs)
     {
         std::string line;
-        std::vector<int> topCal = {0};
+        std::vector<int> topCal;
+        int topThree[3] = {0, 0, 0};
         int sum = 0;
         int high = 0;
 
@@ -28,15 +29,33 @@ int main()
                 sum = 0;
             }
         }
+        sum = 0;
         // EOF reached
         for (int i = 0; i <= topCal.size(); i++)
         {
-            if (topCal[i] > high)
+            if (topCal[i] > topThree[0])
             {
-                high = topCal[i];
+                topThree[2] = topThree[1];
+                topThree[1] = topThree[0];
+                topThree[0] = topCal[i];
+            }
+            else if (topCal[i] > topThree[1])
+            {
+                topThree[2] = topThree[1];
+                topThree[1] = topCal[i];
+            }
+            else if (topCal[i] > topThree[2])
+            {
+                topThree[2] = topCal[i];
             }
         }
-        std::cout << high;
+        for (int j : topThree)
+        {
+            // std::cout << "Printing topThree array:" << std::endl;
+            // std::cout << j << std::endl;
+            sum += j;
+        }
+        std::cout << "Sum: " << sum << std::endl;
     }
     ifs.close();
 }
