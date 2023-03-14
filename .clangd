@@ -1,0 +1,3 @@
+CompileFlags:
+    # Treat code as C++, use C++20 standard
+    Add: [-std=c++17]
