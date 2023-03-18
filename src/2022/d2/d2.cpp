@@ -1,5 +1,4 @@
 #include <fstream>
-#include <ios>
 #include <iostream>
 #include <string>
 
@@ -8,10 +7,12 @@ int main()
     std::ifstream input_file_stream;
 
     input_file_stream.open("input-test.txt", std::ios::in);
-    if (input_file_stream) {
+    if (input_file_stream) 
+    {
         std::string input_line;
 
-        while (!input_file_stream.eof()) {
+        while (!input_file_stream.eof()) 
+        {
             std::getline(input_file_stream, input_line);
             /* TODO:
              * - Find winner of each line
@@ -21,5 +22,5 @@ int main()
         }
     }
 
-    return 1;
+    return 0;
 }

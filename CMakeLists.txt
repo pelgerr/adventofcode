@@ -1,15 +1,13 @@
-cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.24)
+project(AdventOfCode)
 
-project(advent_of_code)
+set(CMAKE_CXX_STANDARD 14)
 
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_FLAGS "-fPIC")
+include_directories(include)
+include_directories(include/AdventOfCode)
 
-set( CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin )
-set( CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib )
-set( CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib )
-
-set(CMAKE_BUILD_TYPE Debug)
-
-add_subdirectory(src)
-
+add_executable(AdventOfCode
+        include/AdventOfCode/algorithm.h
+        src/2022/d1/d1.cpp
+        src/2022/d2/algorithm.cpp
+        src/2022/d2/d2.cpp)
