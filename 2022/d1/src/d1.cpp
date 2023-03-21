@@ -1,19 +1,17 @@
-#include <cstdio>
+// Includes
 #include <iostream>
 #include <fstream>
 #include <string>
 #include <vector>
 #include "22d1.h"
 
-D122::D122() {
+D122::D122() = default;
 
-}
-
-std::string m_line {""};
+std::string m_line;
 std::ifstream m_in_file_stream;
 std::vector<int> m_calorie_sums {0};
 std::array<int, 3> m_top_three {0, 0, 0};
-int m_sum {0};
+int m_sum = 0;
 
 std::vector<int> sum_calories()
 {
@@ -40,7 +38,7 @@ std::vector<int> sum_calories()
 
 void sort(std::vector<int>& calorie_sums, std::array<int, 3>& top_three)
 {
-    int sum;
+    int sum = 0;
     for(int i = 0; i <= calorie_sums.size(); i++)
     {
         if(calorie_sums[i] > top_three[0])
@@ -63,26 +61,6 @@ void sort(std::vector<int>& calorie_sums, std::array<int, 3>& top_three)
         sum += top_three[j];
     }
     std::cout << sum << std::endl;
-};
-
-std::string get_m_line()
-{
-    return m_line;
-};
-
-std::vector<int> get_m_calorie_sums()
-{
-    return m_calorie_sums;
-};
-
-std::array<int, 3> get_m_top_three()
-{
-    return m_top_three;
-};
-
-int get_m_sum()
-{
-    return m_sum;
 };
 
 /*
