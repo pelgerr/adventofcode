@@ -1,7 +1,7 @@
 #include <fstream>
 #include <iostream>
 #include <string>
-#include "22d2.h"
+#include "d2.h"
 
 D2_22::D2_22() {
     std::ifstream input_file_stream;

@@ -1,7 +1,3 @@
-//
-// Created by onigiri on 3/18/23.
-//
-
 #pragma once
 
 class D2_22

@@ -1,7 +1,3 @@
-//
-// Created by onigiri on 3/18/23.
-//
-
 // Preprocessor directives
 #pragma once
 
